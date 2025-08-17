@@ -1,12 +1,10 @@
-
 return {
-  "ellisonleao/gruvbox.nvim",
-  name = "gruvbox",
+ "catppuccin/nvim",
   priority = 1000,
   config = function()
-    require("gruvbox").setup({
-    })
-    vim.cmd.colorscheme("gruvbox")
-  end,
+    -- Optionally configure and load the colorscheme
+    -- directly inside the plugin declaration.
+    vim.cmd.colorscheme('catppuccin')
+    flavour = "macchiato"
+  end
 }
-

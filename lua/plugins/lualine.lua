@@ -3,7 +3,7 @@ return {
   config = function()
     require("lualine").setup({
       options = {
-        theme = "gruvbox_dark",
+        theme = "nightfly",
         section_separators = "",
         component_separators = "",
       },
