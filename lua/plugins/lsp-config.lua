@@ -21,7 +21,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "ts_ls", "tailwindcss","jdtls","basedpyright", },
+        ensure_installed = { "lua_ls", "djlint", "ts_ls", "tailwindcss","jdtls","basedpyright", "rust_analyzer", "go" },
       })
     end
   },
@@ -111,9 +111,19 @@ return {
       })
 
 
+      lspconfig.go.setup({
+        capabilities = capabilities,
+      })
+
       lspconfig.basedpyright.setup({
         capabilities = capabilities,
       })
+
+      lspconfig.rust_analyzer.setup({
+        capabilities = capabilities,
+      })
+
+
 
      -- LSP keymaps
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
